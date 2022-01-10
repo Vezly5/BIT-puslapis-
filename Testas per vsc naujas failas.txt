@@ -1,4 +1,0 @@
-Testas per vsc naujas failas
-
-
-Dar vienas testas
