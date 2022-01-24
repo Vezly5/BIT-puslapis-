@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Antras dizainas su flex </title>
+
+        <style>
+
+            body {
+
+               background-image: url("https://thumbs.dreamstime.com/b/graph-paper-doted-dashes-grid-lines-background-vector-graphic-artwork-design-element-graph-paper-grid-background-127294874.jpg");
+               background-repeat: repeat;
+                
+            }
+                .flex-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    
+                    }
+
+                .flex-container > div {
+                
+                width: 120px;
+                height: 215px;
+               
+                text-align: center;
+                margin: 10px;
+               
+                }
+                img{
+                    width:100%;
+                    height:auto;
+                    border:1px solid grey;
+                    
+                }
+        
+                .largetext {
+                    color: grey;
+                    display: flex;
+                    width: 65%;
+                    font-size: 28px;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    padding-right: 30px;
+                     }
+                .smalltext {
+                    color: grey;
+                    display: flex;
+                    width:30%;
+                    font-size: 10px;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    line-height: 1.5;
+                }
+
+              
+                
+
+            .flex-containertext {
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 700px;
+                margin-top: 40px;
+
+            }      
+            
+            
+            .name {
+                    font-size: 11px;
+                    color: grey;
+                    text-transform: uppercase;
+                    line-height: 0.2;
+                }
+                .workposition {
+                    font-size: 9px;
+                    color: grey;
+                    font-weight: bold;
+                    line-height: 0.2;
+                    
+                }
+                .email {
+                    font-size: 7px;
+                    color: grey;
+                    line-height: 0.2;
+                   
+                }
+          
+
+                .boldwords {
+                    font-weight: bold;
+                    
+                   
+                }
+        </style>
+	</head>
+
+	<body>
+
+        <div class="flex-containertext">
+            <div class="largetext"><p>We do everything with our core values of  <span class="boldwords" >honesty</span>, hard<span class="boldwords" > work</span>, and <span class="boldwords" > trust.</span></p> </div>
+            <div class="smalltext"><p><span class="boldwords" >We believe these charesteristics</span> should influence everything we do in business and in life. We sincerely enjoy work we do,and our clients get to reap the benefits.</p> </div>    
+        </div>
+        <div class="flex-container">
+            <div><img src="https://www.diethelmtravel.com/wp-content/uploads/2016/04/bill-gates-wealthiest-person-279x300.jpg"> <p class="name">name lastname</p><p class="workposition">Director</p><p class="email">director@gmail.com</p></div>
+            <div><img src="https://www.diethelmtravel.com/wp-content/uploads/2016/04/bill-gates-wealthiest-person-279x300.jpg"> <p class="name">name lastname</p><p class="workposition">Director</p><p class="email">director@gmail.com</p></div>
+            <div><img src="https://www.diethelmtravel.com/wp-content/uploads/2016/04/bill-gates-wealthiest-person-279x300.jpg"> <p class="name">name lastname</p><p class="workposition">Director</p><p class="email">director@gmail.com</p></div>
+            <div><img src="https://www.diethelmtravel.com/wp-content/uploads/2016/04/bill-gates-wealthiest-person-279x300.jpg"> <p class="name">name lastname</p><p class="workposition">Director</p><p class="email">director@gmail.com</p></div>
+            <div><img src="https://www.diethelmtravel.com/wp-content/uploads/2016/04/bill-gates-wealthiest-person-279x300.jpg"> <p class="name">name lastname</p><p class="workposition">Director</p><p class="email">director@gmail.com</p></div>
+          </div>
+
+	
+	</body>
+
+
+</html> 
