@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.item1 { grid-area: header;
+
+ }
+.item2 { grid-area: menu; }
+.item3 { 
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    grid-template-areas:
+    'pciture1 article1 '
+    'pciture2 article2  '
+    'pciture3 article3  '
+    'pciture4 article4  ';
+
+     grid-column-gap: 30px;
+     padding: 10px;
+ }
+ 
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header menu'
+    'main main main main main menu';
+
+  grid-gap: 10px;
+
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  padding: 0 0;
+  font-size: 30px;
+}
+
+.menuheadline {
+    padding-left: 20px;
+    background-color: #005B70;
+    color: white;
+    font-size: 15px;
+}
+.menuitem {
+    font-size: 12px;
+}
+h1 {
+    
+    font-size: 28px;
+    font-weight: 600px;
+    color:rgb(50, 66, 97);
+    margin: 0 ;
+    padding:0;
+    text-align:left;
+}
+
+p {
+    margin:0 ;
+    padding:0;
+    text-align:left;
+    font-size:12px;
+    line-height: 1.5;
+}
+.picture {
+    float:left;
+    width: 10%;
+    display:block;
+}
+img {
+    padding: 5px;
+    border: 1px solid #005B70;
+    width: 100%;
+}
+.article {
+    width: 50%;
+    border: 1px solid black;
+    display:block;
+}
+
+h2 {
+    text-transform: uppercase;
+    padding-left: 20px;
+    background-color: #005B70;
+    color:white;
+    margin:0;
+    font-size:15px;
+    line-height: 1.5;
+}
+
+a:link, a:visited {
+    
+    color: rgb(111, 174, 233);
+    text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+
+<div class="grid-container">
+  <div class="item1">
+<h1>Meet the HBCWeb Team</h1>
+
+<p>This is team text very in the header This is team text very in This is team text very in This is team text very in This is team text very in the header This is team text very in the header This is team text very in the header</p>
+
+</div>
+  
+
+<div class="item3">
+       
+    <div class="picture1">
+        <img src="https://g1.dcdn.lt/images/pix/430x260/ukIAUHkUguo/martynas-echodas-89293323.jpg" >
+    </div>
+    <div class="article1"> 
+           <h2>name last name <a href="">Developer</a> </h2> <p>This is article text This is article textThis is article teis article textThis is article teis article textThis is article teis article textThis is article textThis is article textThis is article textThis is article textThis is article textThis is article textThis is article textThis is article text</p>
+    </div> 
+    <div class="picture2">
+        <img src="https://g1.dcdn.lt/images/pix/430x260/ukIAUHkUguo/martynas-echodas-89293323.jpg" >
+    </div>
+    <div class="article2"> 
+        <h2>This is article heading <a href="">Developer</a>  </h2> <p>This is article text This is article textThis is articleis article textThis is article teis article textThis is article teis article textThis is article te textThis is article textThis is article textThis is article textThis is article textThis is article textThis is article textThis is article text</p>
+    </div> 
+    <div class="picture3">
+        <img src="https://g1.dcdn.lt/images/pix/430x260/ukIAUHkUguo/martynas-echodas-89293323.jpg" >
+    </div>
+    <div class="article3"> 
+        <h2>This is article heading <a href="">Developer</a>  </h2> <p>This is article text This is article textThis is article textThis is article textThis is article textThis is article teis article textThis is article teis article textThis is article textThis is article textThis is article textThis is article textThis is article text</p>
+    </div> 
+
+    <div class="picture4">
+        <img src="https://g1.dcdn.lt/images/pix/430x260/ukIAUHkUguo/martynas-echodas-89293323.jpg" >
+    </div>
+    <div class="article4"> 
+        <h2>This is article heading <a href="">Developer</a>  </h2> <p>This is article text This is article textThis is article textThis is article textThisis article textThis is article teis article textThis is article te is article textThis is article textThis is article textThis is article textThis is article textThis is article text</p>
+    </div> 
+
+    </div>  
+
+
+
+ 	<div class="item2">
+         <div class="menuheadline"> More about HSBC</div>
+
+        <div class="menuitem">
+            Company Overview
+        </div>
+        <div class="menuitem">
+            Meet the team
+        </div>
+        <div class="menuitem">
+            The Digs
+        </div>
+        <div class="menuitem">
+            The price line PM
+        </div>
+        <div class="menuitem">
+            Client testimonials
+        </div>
+        <div class="menuheadline"> What our client are saying</div>
+     </div>
+</div>
+
+</body>
+</html>
