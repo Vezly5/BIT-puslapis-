@@ -95,9 +95,21 @@ h2 {
 
 a:link, a:visited {
     
-    color: rgb(111, 174, 233);
+    color: rgb(93, 210, 231);
     text-decoration: none;
 }
+
+
+
+@media screen  and (orientation: portrait) { 
+    .grid-container {
+  display: grid;
+  grid-template-areas:
+    'menu'
+    'main';
+        }
+
+ }
 </style>
 </head>
 <body>
@@ -148,19 +160,19 @@ a:link, a:visited {
          <div class="menuheadline"> More about HSBC</div>
 
         <div class="menuitem">
-            Company Overview
+            <a href="">Company Overview</a>
         </div>
         <div class="menuitem">
-            Meet the team
+            <a href=""> Meet the team</a>
         </div>
         <div class="menuitem">
-            The Digs
+            <a href="">The Digs</a>
         </div>
         <div class="menuitem">
-            The price line PM
+            <a href="">The price line PM</a>
         </div>
         <div class="menuitem">
-            Client testimonials
+            <a href="">Client testimonials</a>
         </div>
         <div class="menuheadline"> What our client are saying</div>
      </div>
