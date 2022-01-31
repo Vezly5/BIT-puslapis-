@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> 7 uzduotis circular menu</title>
+
+        <style>
+        .circle-container {
+        position: relative;
+        width: 24em;
+        height: 24em;
+        padding: 2.8em;
+        /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
+        border: dashed 1px;
+        border-radius: 50%;
+        margin: 1.75em auto 0;
+    }
+        .circle-container a {
+        display: block;
+        position: absolute;
+        top: 50%; left: 50%;
+        width: 4em; height: 4em;
+        margin: -2em;
+    }
+    .circle-container img { display: block; width: 100%; }
+    .deg0 { transform: translate(12em); } /* 12em = half the width of the wrapper */
+    .deg36 { transform: rotate(36deg) translate(12em) rotate(-36deg); }
+    .deg72 { transform: rotate(72deg) translate(12em) rotate(-72deg); }
+    .deg108 { transform: rotate(108deg) translate(12em) rotate(-108deg); }
+    .deg144 { transform: rotate(144deg) translate(12em) rotate(-144deg); }
+    .deg180 { transform: translate(-12em); }
+    .deg216 { transform: rotate(216deg) translate(12em) rotate(-216deg); }
+    .deg252 { transform: rotate(252deg) translate(12em) rotate(-252deg); }
+    .deg288 { transform: rotate(288deg) translate(12em) rotate(-288deg); }
+    .deg324 { transform: rotate(324deg) translate(12em) rotate(-324deg); }
+        </style>
+	</head>
+
+	<body>
+
+        <div class='circle-container'>
+            <a href='#' class='center'><img src='image.jpg'></a>
+            <a href='#' class='deg0'><img src='image.jpg'></a>
+            <a href='#' class='deg36'><img src='image.jpg'></a>
+            <a href='#' class='deg72'><img src='image.jpg'></a>
+            <a href='#' class='deg108'><img src='image.jpg'></a>
+            <a href='#' class='deg144'><img src='image.jpg'></a>
+            <a href='#' class='deg180'><img src='image.jpg'></a>
+            <a href='#' class='deg216'><img src='image.jpg'></a>
+            <a href='#' class='deg252'><img src='image.jpg'></a>
+            <a href='#' class='deg288'><img src='image.jpg'></a>
+            <a href='#' class='deg324'><img src='image.jpg'></a>
+         
+        </div>
+
+
+	</body>
+</html>
