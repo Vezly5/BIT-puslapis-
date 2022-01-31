@@ -8,6 +8,7 @@
 .item2 { grid-area: menu; }
 .item3 { 
     grid-area: main;
+    
     display: grid;
     grid-template-columns: 25% 1fr;
     grid-template-areas:
@@ -42,13 +43,23 @@
 }
 
 .menuheadline {
-    padding-left: 20px;
+    padding: 0.5rem;
     background-color: #005B70;
     color: white;
-    font-size: 15px;
+    font-size: 14px;
 }
 .menuitem {
+    
+    background-color:rgb(234, 243, 243);
     font-size: 12px;
+    padding: 0.30rem 0.30rem 0.30rem 0.30rem;
+    border-bottom: 1px solid darkcyan;
+}
+
+.menuitem:hover {
+    color:rgb(50, 66, 97);
+    font-size: 12px;
+    background-color: #f0f7f8;
 }
 h1 {
     
@@ -58,11 +69,12 @@ h1 {
     margin: 0 ;
     padding:0;
     text-align:left;
+
 }
 
 p {
     margin:0 ;
-    padding:0;
+    padding-left: 20px;
     text-align:left;
     font-size:12px;
     line-height: 1.5;
@@ -88,9 +100,10 @@ h2 {
     padding-left: 20px;
     background-color: #005B70;
     color:white;
-    margin:0;
-    font-size:15px;
+    margin:0 0 1rem 0;
+    font-size:12px;
     line-height: 1.5;
+  
 }
 
 a:link, a:visited {
@@ -99,17 +112,78 @@ a:link, a:visited {
     text-decoration: none;
 }
 
+a:hover {
+  color:  rgb(50, 66, 97);
+    
+}
 
+.dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  background-color: rgb(117, 218, 86);
+  border-radius: 50%;
+  display: inline-block;
+}
+.whitedot {
+  height: 0.5rem;
+  width: 0.5rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  display: inline-block;
+}
 
 @media screen  and (orientation: portrait) { 
     .grid-container {
   display: grid;
   grid-template-areas:
     'menu'
+    'header'
     'main';
+
         }
 
  }
+
+ .bubble {
+    position: relative;
+    background: #bab3b3;
+    color: #3d3939;
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    width: 95%;
+    height: auto;
+    border-radius: 10px;
+    margin: 5px;
+    
+}
+.bubble:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-width: 20px 20px 0 0;
+    border-color: #bab3b3 transparent transparent transparent;
+    bottom: -20px;
+    left: 84%;
+    margin-left: -10px;
+}
+
+
+.bubbleauthor {
+    margin-top: -5px;
+    color: #005B70;
+    text-decoration: underline;
+
+
+}
+
+
+
+
 </style>
 </head>
 <body>
@@ -157,24 +231,26 @@ a:link, a:visited {
 
 
  	<div class="item2">
-         <div class="menuheadline"> More about HSBC</div>
+         <div class="menuheadline"> <span class="whitedot"></span> More about HSBC</div>
 
         <div class="menuitem">
-            <a href="">Company Overview</a>
+            <span class="dot"></span> <a href="">Company Overview</a>
         </div>
         <div class="menuitem">
-            <a href=""> Meet the team</a>
+            <span class="dot"></span> <a href=""> Meet the team</a>
         </div>
         <div class="menuitem">
-            <a href="">The Digs</a>
+            <span class="dot"></span><a href="">The Digs</a>
         </div>
         <div class="menuitem">
-            <a href="">The price line PM</a>
+            <span class="dot"></span> <a href="">The price line PM</a>
         </div>
         <div class="menuitem">
-            <a href="">Client testimonials</a>
+            <span class="dot"></span> <a href="">Client testimonials</a>
         </div>
         <div class="menuheadline"> What our client are saying</div>
+        <div class="bubble">"Good team text very good team always was a good team"</div>
+        <p class="bubbleauthor">Jeremy Clarkson</p>
      </div>
 </div>
 
