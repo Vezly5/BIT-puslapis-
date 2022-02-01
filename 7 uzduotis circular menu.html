@@ -10,7 +10,7 @@
         height: 24em;
         padding: 2.8em;
         /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
-        border: dashed 1px;
+
         border-radius: 50%;
         margin: 1.75em auto 0;
     }
@@ -18,8 +18,15 @@
         display: block;
         position: absolute;
         top: 50%; left: 50%;
-        width: 4em; height: 4em;
-        margin: -2em;
+        width: 5em; height: 5em;
+        margin: 0em;
+    }
+
+
+    .circle {
+    border: 2px solid rgb(107, 158, 224);
+        border-radius:50%;
+    
     }
     .circle-container img { display: block; width: 100%; }
     .deg0 { transform: translate(12em); } /* 12em = half the width of the wrapper */
@@ -31,24 +38,64 @@
     .deg216 { transform: rotate(216deg) translate(12em) rotate(-216deg); }
     .deg252 { transform: rotate(252deg) translate(12em) rotate(-252deg); }
     .deg288 { transform: rotate(288deg) translate(12em) rotate(-288deg); }
-    .deg324 { transform: rotate(324deg) translate(12em) rotate(-324deg); }
+    .deg324 {      
+        transform: rotate(324deg) translate(12em) rotate(-324deg);
+        
+            }
+    .deg0text { transform: translate(17em); } /* 12em = half the width of the wrapper */
+    .deg36text{ transform: translate(5em) rotate(36deg) translate(12em) rotate(-36deg); }
+    .deg72text{ transform: translate(4em) rotate(72deg) translate(16em) rotate(-72deg); }
+    .deg108text{ transform: translate(-7em) rotate(108deg) translate(16em) rotate(-108deg); }
+    .deg144text{ transform:translate(-7em)  rotate(144deg) translate(12em) rotate(-144deg); }
+    .deg180text{ transform: translate(-18em); }
+    .deg216text{ transform: translate(-8em) rotate(216deg) translate(12em) rotate(-216deg); }
+    .deg252text{ transform: translate(-11em) rotate(252deg) translate(12em) rotate(-252deg); }
+    .deg288text{ transform: translate(5em) rotate(288deg) translate(12em) rotate(-288deg); }
+    .deg324text{ transform: translate(5em) rotate(324deg) translate(12em) rotate(-324deg);
+        
+            }
+
+
+
+
+
+
+
+    span {
+        top: 50%; left: 50%;
+        display:block;
+        position:absolute;
+        translate: 100px;
+        font-weight: bold;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        
+    }
+
+      img {
+
+        border-radius: 50%;
+        -moz-box-shadow: 10px 10px 50px #ccc;
+      -webkit-box-shadow: 10px 10px 50px #ccc;
+      box-shadow: 1px 1px 10px rgb(168, 167, 167);
+      }
         </style>
 	</head>
 
 	<body>
 
         <div class='circle-container'>
-            <a href='#' class='center'><img src='image.jpg'></a>
-            <a href='#' class='deg0'><img src='image.jpg'></a>
-            <a href='#' class='deg36'><img src='image.jpg'></a>
-            <a href='#' class='deg72'><img src='image.jpg'></a>
-            <a href='#' class='deg108'><img src='image.jpg'></a>
-            <a href='#' class='deg144'><img src='image.jpg'></a>
-            <a href='#' class='deg180'><img src='image.jpg'></a>
-            <a href='#' class='deg216'><img src='image.jpg'></a>
-            <a href='#' class='deg252'><img src='image.jpg'></a>
-            <a href='#' class='deg288'><img src='image.jpg'></a>
-            <a href='#' class='deg324'><img src='image.jpg'></a>
+            <a href='#' >  <img src='https://cdn-icons-png.flaticon.com/128/921/921305.png' ></a>
+            <span class="deg0text">Overdraft Facilties</span><a href='#' class='deg0 circle'><img src='https://cdn-icons-png.flaticon.com/512/1077/1077976.png'></a>
+            <span class="deg36text">Overdraft FaciltiesSSSSSSS</span><a href='#' class='deg36 circle'><img src='https://cdn-icons.flaticon.com/png/512/2953/premium/2953363.png?token=exp=1643737478~hmac=bb666fc09087f43e7433f96ebef1fb98'></a>
+            <span class="deg72text">Financial services</span><a href='#' class='deg72 circle'><img src='https://cdn-icons.flaticon.com/png/512/2936/premium/2936730.png?token=exp=1643737516~hmac=443fe32e8d22b49bcbb1e9620aa7316e'></a>
+            <span class="deg108text">Investment services</span><a href='#' class='deg108 circle'><img src='https://cdn-icons-png.flaticon.com/512/925/925748.png'></a>
+            <span class="deg144text">Pension Schemes</span><a href='#' class='deg144 circle'><img src='https://cdn-icons-png.flaticon.com/512/1763/1763477.png'></a>
+            <span class="deg180text">Online banking</span><a href='#' class='deg180 circle'><img src='https://cdn-icons.flaticon.com/png/128/2680/premium/2680142.png?token=exp=1643737657~hmac=7a535e1fba64d0c0293dfe01a34b08a9'></a>
+            <span class="deg216text">Insurance Facilities</span><a href='#' class='deg216 circle'><img src='https://cdn-icons.flaticon.com/png/512/2680/premium/2680131.png?token=exp=1643737657~hmac=186955c9e0dc26203218a815bfc0a37d'></a>
+            <span class="deg252text">Foregin Exchange Services</span><a href='#' class='deg252 circle'><img src='https://cdn-icons.flaticon.com/png/512/1990/premium/1990466.png?token=exp=1643737683~hmac=ddeb8931bcbaf67356486df7cbd8b28a'></a>
+            <span class="deg288text">Mortage Facilities</span><a href='#' class='deg288 circle'><img src='https://cdn-icons.flaticon.com/png/512/1990/premium/1990431.png?token=exp=1643737698~hmac=67cc0343c563c0fb3cc2482ce02c3c03'></a>
+            <span class="deg324text">Virtual Cash</span><a href='#' class='deg324 circle'><img src='https://cdn-icons.flaticon.com/png/128/1990/premium/1990496.png?token=exp=1643737722~hmac=63b8b185b134a71ce664506763f0dc02'></a>
          
         </div>
 
