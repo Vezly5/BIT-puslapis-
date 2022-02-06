@@ -23,8 +23,31 @@
             
             var element = document.createElement("div");
             element.appendChild(document.createTextNode('Viso gero'));
-            document.getElementById("demo").innerHTML = "<div>Labas</div>";
+            document.getElementById("demo")= "<div>Labas</div>";
             document.getElementById("demo").appendChild(element);
+
+            let h = "<h1>Heading</h1>" ;
+            let para = "<p>para</p>";
+            let nuoroda = '<a href=""></a>';
+            
+            
+            
+            function firstLogfunction(text){
+            console.log(text);
+            }
+
+            firstLogfunction ("test");
+            
+            function secondfunctionZodziai(zodis1, zodis2){
+            return zodis1 + zodis2
+            }
+
+            let tekstas = secondfunctionZodziai ( "Ilgas" , "Tekstas" ) ;
+            firstLogfunction(tekstas);
+
+
+
+
         </script>
 	</body>
 

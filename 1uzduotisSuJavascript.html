@@ -1,0 +1,68 @@
+<title> Tables</title>
+<meta charset="UTF-8">
+<style>
+    
+    body { margin: 0;
+        background-color: rgb(222, 235, 238);
+    
+     } 
+          .articlerow {
+            
+            border-bottom: 2px solid rgb(82, 156, 226);
+            width:100% ;  
+            padding: 0;
+
+     }
+            .articletitle {
+            font-size:21px;
+            font-weight: bold;
+            display:inline-block;
+            width:90%
+
+              }
+            .articledate {
+        
+            font-style: italic;
+            display:inline-block;
+            text-align: right;
+            
+            
+              }
+
+           .paragraph{ 
+                
+                width:100%;
+                padding-bottom:10px;
+                
+                 
+            }        
+        </style>
+	</head>
+
+	<body>
+    
+        <script>
+            let articleName= "Straipsnio Pavadinimas"
+            let date = "1st of January "
+            let paragraphText = "  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod tortor massa, eu pellentesque risus aliquet at. Vivamus in posuere diam. Nullam feugiat cursus nibh in cursus. Mauris scelerisque, felis at pellentesque congue, dui risus rhoncus nulla, at dapibus tortor lorem eget metus. Nullam sollicitudin fermentum leo, non pellentesque magna facilisis a. Donec vel laoreet arcu, eget efficitur libero. Duis commodo, elit blandit dapibus scelerisque, ante justo ullamcorper libero, sit amet faucibus tellus dolor ut ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque ultrices, ligula pellentesque venenatis dictum, lacus ante ullamcorper ex, id dictum tellus felis a odio."
+            let articleName2= "Kitas Pavadinimas"
+            let date2 = "2nd of December"
+            let paragraphText2 = " Different Totally Different  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod tortor massa, eu pellentesque risus aliquet at. Vivamus in posuere diam. Nullam feugiat cursus nibh in cursus. Mauris scelerisque, felis at pellentesque congue, dui risus rhoncus nulla, at dapibus tortor lorem eget metus. Nullam sollicitudin fermentum leo, non pellentesque magna facilisis a. Donec vel laoreet arcu, eget efficitur libero. Duis commodo, elit blandit dapibus scelerisque, ante justo ullamcorper libero, sit amet faucibus tellus dolor ut ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque ultrices, ligula pellentesque venenatis dictum, lacus ante ullamcorper ex, id dictum tellus felis a odio."
+           
+            
+            
+            function createArtcticle (articleName,date,paragraphText) {
+                    
+            document.body.innerHTML += '<div class="articlerow"><div class="articletitle" >' + articleName + '</div><div class="articledate"  >' + date +'</div></div></div>'
+            document.body.innerHTML += '<div class="tr"> <div class="paragraph" >' + paragraphText + '</div></div>'
+            }
+            
+            createArtcticle (articleName,date,paragraphText);
+            createArtcticle (articleName2,date2,paragraphText2);
+   
+
+        </script>
+	</body>
+
+
+</html>
