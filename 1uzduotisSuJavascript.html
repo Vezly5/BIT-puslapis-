@@ -40,8 +40,12 @@
 	</head>
 
 	<body>
-    
+        
+
+        <h1 id="straipsniai" class= "articletitle">Straipsniai</h1>
+        <h1 id="close" class= "articletitle" >Close</h1>
         <script>
+            let counter = 0
             let articleName= "Straipsnio Pavadinimas"
             let date = "1st of January "
             let paragraphText = "  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod tortor massa, eu pellentesque risus aliquet at. Vivamus in posuere diam. Nullam feugiat cursus nibh in cursus. Mauris scelerisque, felis at pellentesque congue, dui risus rhoncus nulla, at dapibus tortor lorem eget metus. Nullam sollicitudin fermentum leo, non pellentesque magna facilisis a. Donec vel laoreet arcu, eget efficitur libero. Duis commodo, elit blandit dapibus scelerisque, ante justo ullamcorper libero, sit amet faucibus tellus dolor ut ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque ultrices, ligula pellentesque venenatis dictum, lacus ante ullamcorper ex, id dictum tellus felis a odio."
@@ -57,9 +61,25 @@
             document.body.innerHTML += '<div class="tr"> <div class="paragraph" >' + paragraphText + '</div></div>'
             }
             
-            createArtcticle (articleName,date,paragraphText);
-            createArtcticle (articleName2,date2,paragraphText2);
-   
+
+
+
+            function buttonsHandler()
+    {
+        if(counter < 2  )
+        {createArtcticle (articleName,date,paragraphText);
+        createArtcticle (articleName2,date2,paragraphText2);
+        
+        counter  = counter + 1;
+        console.log(counter);
+        }
+
+    }
+
+
+        document.getElementById("straipsniai").addEventListener("click", buttonsHandler);
+        document.getElementById("close").addEventListener("click", buttonsHandler);
+
 
         </script>
 	</body>
