@@ -1,0 +1,247 @@
+<title> 17 uzduoteliu </title>
+<meta charset="UTF-8">
+<style>
+    
+    body { margin: 0;
+        background-color: rgb(222, 235, 238);
+    
+     } 
+          .articlerow {
+            
+            border-bottom: 2px solid rgb(82, 156, 226);
+            width:100% ;  
+            padding: 0;
+
+     }
+            .articletitle {
+            font-size:21px;
+            font-weight: bold;
+            display:inline-block;
+            width:90%
+
+              }
+            .articledate {
+        
+            font-style: italic;
+            display:inline-block;
+            text-align: right;
+            
+            
+              }
+
+           .paragraph{ 
+                
+                width:100%;
+                padding-bottom:10px;
+                
+                 
+            }        
+        </style>
+	</head>
+
+	<body>
+
+        <input type="number" id="myNumber" value="20">
+        <button onclick="gerasblogas()">Patikrinti skaiciu </button>
+        <p id="atsakymas"></p>
+
+        <input type="number" id="sviesoforasinput" value="1">
+        <button onclick="sviesoforas()">Patikrinti sviesoforas</button>
+        <p id="spalva"></p>
+
+        <p id="knygos"></p>
+
+
+
+
+        <script>
+
+        
+            
+            function gerasblogas()
+       {      
+            let x = document.getElementById("myNumber").value;
+   
+        if(x < 0  ) {
+        
+        document.getElementById("atsakymas").innerHTML = "Blogas";
+            }
+        else {
+        document.getElementById("atsakymas").innerHTML = "Geras";
+        
+       }
+    }
+
+    function sviesoforas()
+       {      
+            let s = document.getElementById("sviesoforasinput").value;
+   
+        if (s == 1  ) {
+        
+        document.getElementById("spalva").innerHTML = "EITI";
+        document.body.style.backgroundColor = "Green";
+            }
+        else if ( s == 2 ) {
+        document.getElementById("spalva").innerHTML = "LAUKTI";
+        document.body.style.backgroundColor = "Yellow";
+       }
+       else {
+        document.getElementById("spalva").innerHTML = "SUSTOTI";
+        document.body.style.backgroundColor = "RED";
+       }
+    }
+
+        let d = 2;
+        let k= 8;
+        let n = 2;
+        let artelpa = d * n - k
+        
+  
+        if (artelpa >= 0) {
+
+            console.log(artelpa + "Knygos Telpa");
+            document.getElementById("knygos").innerHTML = "telpa";
+        }
+        else {   
+
+            console.log(artelpa + "Knygos NETELPA")
+        }
+
+
+        let polindromas = "3223"
+        let pirmasskaitmuo = polindromas.slice(0,1)
+        let antrasskaitmuo = polindromas.slice(1,2)
+        let treciasskaitmuo = polindromas.slice(2,3)
+        let ketvirtasskaitmuo = polindromas.slice(3,4)
+
+        console.log("polindromas " + polindromas.slice(0,1) + polindromas.slice(1,2 ) + polindromas.slice(2,3 ) + polindromas.slice(3,4 ))  ;
+        
+        if ( pirmasskaitmuo == ketvirtasskaitmuo && antrasskaitmuo == treciasskaitmuo  ) {
+            console.log("Skicius yra Polindromas " + polindromas )
+        }
+        else {
+            console.log("Skaicius NE polindromas " + polindromas )
+        }
+        
+
+        let bilietas = 222442
+        let patikrinimas = 222442 % 2
+
+        if (patikrinimas == 0 ) { 
+            console.log("Bilietas laimingas ")
+        }
+        else {
+
+            console.log("Bilietas NElaimingas ")
+        }
+
+
+        let metai = 2000
+
+        if ( metai % 4 == 00 && metai % 100 != 0) {
+        console.log ("keliamieji")}
+        else {
+            console.log ("paprasti metai ")
+        }
+            
+        let polindromas2 = "17341"
+        let xpirmasskaitmuo = polindromas2.slice(0,1)
+        let xantrasskaitmuo = polindromas2.slice(1,2)
+        let xtreciasskaitmuo = polindromas2.slice(2,3)
+        let xketvirtasskaitmuo = polindromas2.slice(3,4)
+        let xpenktasskaitmuo = polindromas2.slice(4,5)
+
+        if ( xpirmasskaitmuo == xpenktasskaitmuo && xantrasskaitmuo == xketvirtasskaitmuo  ) {
+            console.log("Skicius yra Polindromas "  + xpirmasskaitmuo +xantrasskaitmuo+xtreciasskaitmuo+xketvirtasskaitmuo+xpenktasskaitmuo )
+        }
+        else {
+            console.log("Skaicius NE polindromas " + polindromas2 )
+          
+        }
+
+        let kauliukas = 2
+        if ( kauliukas == 1 || kauliukas  == 3 || kauliukas == 5  ) {
+            console.log("Tvarko jaunelis"   )
+        }
+        else {
+            console.log("Tvarko virsenis")
+          
+        }
+
+        let p1= 5
+        let p2= 8
+        let p3= 9
+        const array1 = [p1, p2,p3];
+        console.log(Math.max(...array1));
+
+        if (Math.max(...array1) == p1) {
+            console.log("P1 gavo geriausia pazymi")
+        }
+        else if (Math.max(...array1) == p2) {
+            console.log("P2 gavo geriausia pazymi")
+        }
+        else {
+            console.log("P3 gavo geriausia pazymi")
+        }
+
+        let menesis = 6
+        function daysInMonth (month, year) {
+         return new Date(year, month, 0).getDate();
+            }
+        console.log(daysInMonth(menesis,2022));
+        
+
+        let v1 = 8
+        let m1 = 29
+        let m2 = 43
+        let v = 9
+        let m = 5 
+
+        let vv1 = 8
+        let mm1 = 29
+        let mm2 = 23
+        
+         if (v1*60+m1+m2 > v*60+m ) {
+             console.log ( "veluos")
+
+         }
+
+         if (vv1*60+mm1+mm2 < v*60+m ) {
+            console.log ( "neveluos")
+             }
+           
+
+        
+        degtukai = 6
+
+        if ( degtukai % 3 == 0 ) { 
+
+            console.log ( "Trikampi sudelioti galima")
+            }
+        else  {
+
+            console.log ( "Trikampi sudelioti negalima")
+
+
+        }    
+
+        ometai = 1896
+        kitimetai = 2004
+        nuopradzios = (kitimetai - ometai)/4 + 1
+        if ( (kitimetai - ometai ) % 4 == 0 ) { 
+            console.log ( kitimetai + "metai olimpiniai eiles nr" + nuopradzios  )
+        }
+        else {
+            console.log ( kitimetai + "metai neolimpiniai " + kitimetai  )
+        
+        }
+
+        </script>       
+        
+        
+
+
+	</body>
+
+
+</html>
