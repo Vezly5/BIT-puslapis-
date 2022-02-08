@@ -236,6 +236,169 @@
         
         }
 
+
+           let q = 1 
+           let w = 3
+           let  e = 4
+           
+
+
+           let positivex = (-w + Math.sqrt(Math.pow(w, 2) - 4 * q * e)) / (2 * q)
+           let negativex = (-w - Math.sqrt(Math.pow(w, 2) - 4 * q * e)) / (2 * q)
+           
+            if ( positivex == negativex ) {
+                console.log("sprendinys"+ positivex)
+            }
+      
+            else {
+                console.log("sprendinys"+ positivex + "ir " + negativex)
+            }
+            
+
+
+            let centai = 90
+            let pledai = 20
+            let leduporcijuiseina =   Math.floor(centai / pledai);
+            let likecentai = 50%20
+
+            
+            console.log("ledu iseina "+ leduporcijuiseina + " ir lieka centu " +likecentai)
+
+
+            let ndezes = 100
+            let mtelpadeziu = 14
+            let patikrinimaskartu = ndezes%mtelpadeziu
+            let kartuvaziuot = Math.floor(ndezes/mtelpadeziu)
+
+            if (patikrinimaskartu != 0) {
+            console.log (kartuvaziuot+1)}
+            else {
+                console.log ("vaziuoti kartu " + kartuvaziuot) 
+            }
+
+
+           let vienaskaicius = 30 
+           let kitasskaicius = 20 
+
+            if (vienaskaicius < kitasskaicius) {
+                vienaskaicius = vienaskaicius+1
+                kitasskaicius = kitasskaicius -1
+            }
+            else {
+                vienaskaicius = vienaskaicius-1
+                kitasskaicius = kitasskaicius +1
+            }
+            
+            console.log(vienaskaicius + "ir " + kitasskaicius )
+
+            let vidutinisv = 120
+            let lankytojai = 800 
+
+            let vienasperskaito = vidutinisv*12 / lankytojai
+
+            console.log(Math.round(vienasperskaito))
+
+
+            
+            let inevilniuvM = 20 
+            let keleiviuskaiciusn = 100
+            let vagonai = 4 
+
+            let ivilniuk= (keleiviuskaiciusn - inevilniuvM )/ vagonai
+            console.log(ivilniuk)
+            
+            
+            let naujakaina = 54000
+            let parasytakaina = 60000
+
+            console.log("bloga kaina" + parasytakaina)
+            
+            parasytakaina = naujakaina*1.25
+
+            console.log("gera kaina" + parasytakaina)
+
+            let surinktan = 39.2
+            let surinktam = surinktan-0.4
+            let surinktaabiejuose = surinktan +surinktam
+            console.log("surinkta abiejuose " + surinktaabiejuose )
+
+            let radius = 1 
+            let radius2 = radius*2
+            let radius3 = radius2*2
+            let plotas1 = Math.PI * (radius * radius)
+            let plotas2 = Math.PI * (radius2 * radius2)
+            let plotas3 = Math.PI * (radius3 * radius3)
+             console.log ("pirmas" + Math.floor(plotas1 * 100) / 100 )
+             console.log ("antras" + Math.floor(plotas2 * 100) / 100) 
+             console.log ("trecias" + Math.floor(plotas3 * 100) / 100) 
+
+
+
+             let skaicius = 1247756;
+
+            let array = Array.from(String(skaicius), Number);
+
+            surikiuota =  array.sort(function(a, b){return a-b}) 
+
+            let paverstasiskaiciu = surikiuota.toString()
+
+                console.log (paverstasiskaiciu)
+
+    
+
+            
+    let firstnum = 3, secondnum = 4, thirdnum = 6, fourthnum = 1, fifthnum = 5 , sixthnum = 2
+    let firstPlace,secondPlace,thirdPlace,fourthPlace       
+
+    if (firstnum > secondnum){
+        temp = firstnum;
+        firstnum = secondnum;
+        secondnum = temp;
+    }  
+    // Swaps firstnum and secondnum
+    if (secondnum > thirdnum){
+        temp = secondnum;
+        secondnum = thirdnum;
+        thirdnum = temp;
+    } 
+    // Swaps secondnum and thirdnum
+    if (thirdnum > fourthnum){
+        temp = thirdnum;
+        thirdnum = fourthnum;
+        fourthnum = temp;
+    }
+
+
+
+
+    
+    // Swaps thirdnum and fourthnum
+     if (firstnum > secondnum){
+        temp = firstnum;
+        firstnum = secondnum;
+        secondnum = temp;
+    } 
+    // Swaps firstnum and secondnum
+    if (secondnum > thirdnum){
+        temp = secondnum;
+        secondnum = thirdnum;
+        thirdnum = temp;
+    } 
+    // Swaps secondnum and thirdnum
+    if (firstnum > secondnum){
+        temp = firstnum;
+        firstnum = secondnum;
+        secondnum = temp;
+    }
+
+
+
+    console.log("The sorted numbers are: "+ firstnum + " " + secondnum + " " + thirdnum + " " + fourthnum);
+    
+
+
+
+
         </script>       
         
         
