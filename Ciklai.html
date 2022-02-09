@@ -1,0 +1,123 @@
+<title> ciklai</title>
+<meta charset="UTF-8">
+<style>
+    
+    body { margin: 0;
+        background-color: rgb(222, 235, 238);
+    
+     } 
+          .articlerow {
+            
+            border-bottom: 2px solid rgb(82, 156, 226);
+            width:100% ;  
+            padding: 0;
+
+     }
+            .articletitle {
+            font-size:21px;
+            font-weight: bold;
+            display:inline-block;
+            width:90%
+
+              }
+            .articledate {
+        
+            font-style: italic;
+            display:inline-block;
+            text-align: right;
+            
+            
+              }
+
+           .paragraph{ 
+                
+                width:100%;
+                padding-bottom:10px;
+                
+                 
+            }        
+        </style>
+	</head>
+
+	<body>
+
+   
+
+
+        <script>
+            skaicius = 100 
+            
+       while (  skaicius < 1000 ) {
+        if ( skaicius % 3 == 0 || skaicius % 7 == 0  ) { 
+        console.log ("dalinasi "+ skaicius)
+        }
+
+         skaicius = skaicius + 1   
+         }
+
+
+
+         let reiksmeA = -20 
+         let reiksmeB = 50 
+
+         if (reiksmeA < reiksmeB ) { 
+
+            let x = reiksmeA
+            let sumnegative = 0
+            let sumpositive = 0
+                while (reiksmeA <0 ) { 
+                    sumnegative = sumnegative + reiksmeA ;
+                    reiksmeA++;
+                    
+                   
+                     }  
+                 console.log("negative sum " + sumnegative)
+
+                 while ( reiksmeB > 0) { 
+                    
+                    sumpositive = sumpositive +reiksmeB
+                    reiksmeB--; 
+                   
+                 }   
+                console.log("positive sum " + sumpositive)
+                 if ( -(sumnegative) < sumpositive ) { 
+                     console.log ("Negative sum " +sumnegative+ " is smaller than " + sumpositive)
+                 }
+                else {
+
+                    console.log ("Negative sum " +sumnegative+ " is larger than " + sumpositive)
+                
+
+                 }
+               
+         }
+          else { 
+            console.log ("koks nors pranesimas")
+        }
+
+
+          let divskaiciusK = 5
+            let bgspalva = "blue"
+            let headingpalva = "white"
+            let padding = 10
+
+           while (divskaiciusK > 0) { 
+            divskaiciusK--;
+
+            document.body.innerHTML = document.body.innerHTML + "<div style='background-color:"+bgspalva+";padding:"+padding+"px;'><h1 style='color:"+headingpalva+"'>Hello!</h1><p>Everyone</p></div>";
+
+           }
+
+
+
+
+       
+        </script>       
+        
+        
+
+
+	</body>
+
+
+</html>
