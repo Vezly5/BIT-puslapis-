@@ -1,0 +1,113 @@
+<title> masyvai</title>
+<meta charset="UTF-8">
+<style>
+    
+    body { margin: 0;
+        background-color: rgb(222, 235, 238);
+    
+     } 
+          .articlerow {
+            
+            border-bottom: 2px solid rgb(82, 156, 226);
+            width:100% ;  
+            padding: 0;
+
+     }
+            .articletitle {
+            font-size:21px;
+            font-weight: bold;
+            display:inline-block;
+            width:90%
+
+              }
+            .articledate {
+        
+            font-style: italic;
+            display:inline-block;
+            text-align: right;
+            
+            
+              }
+
+           .paragraph{ 
+                
+                width:100%;
+                padding-bottom:10px;
+                
+                 
+            } 
+            
+            div {
+                border: 1px solid black;
+
+            }
+        </style>
+	</head>
+
+	<body>
+
+        <div id="links"> 
+        <h1>Nuorodos</h1>
+        <p><a href ="https://pastebin.com/" >Paste bin </a></p>
+        <p><a href ="https://validator.w3.org/">Validator</a></p>
+        <p><a href ="https://www.w3schools.com/" >W3school </a></p>
+        <p><a href ="http://mybitbybit.site/java34" > Mybit </a></p>
+        <p><a href ="https://github.com/Vezly5/BIT-puslapis-"> Github</a></p>
+   
+        </div>
+
+        <div id="width1" style="width: 801px;"> 
+
+            <h1>Nuorodos</h1>
+        </div>
+        <div id="width2" style="width: 900px;"> 
+
+            <h1>Nuorodos</h1>
+        </div>
+        <div id="width3" style="width: 700px;" > 
+            <h1>Nuorodos</h1>
+
+        </div>
+
+
+
+        <script>
+           
+
+           let maindiv = document.getElementById("links");
+           let atags = maindiv.getElementsByTagName('a');
+           let i = 0
+           for ( i ; i < atags.length; i++) { 
+            atags[i].style.textDecoration = "none";
+
+           }
+           console.log( atags.length)
+
+
+           let ekranas = screen.width
+           let divtags = document.getElementsByTagName('div');
+           console.log( divtags.length)
+
+           let skaicius = 0
+
+           for ( skaicius; skaicius < divtags.length; skaicius++) { 
+
+            if (ekranas/2 < divtags[skaicius].offsetWidth) {
+        
+            divtags[skaicius].style.backgroundColor = 'red';
+                 }
+           }
+           
+           console.log("div plots" + divtags[3].offsetWidth)
+           console.log( ekranas/2)
+
+       
+        </script>       
+        
+        
+
+
+	</body>
+
+
+</html>
