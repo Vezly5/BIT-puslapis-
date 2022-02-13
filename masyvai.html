@@ -41,6 +41,12 @@
                 border: 1px solid black;
 
             }
+
+            .spansecondletter { 
+
+                color: yellow;
+
+            }
         </style>
 	</head>
 
@@ -53,7 +59,14 @@
         <p><a href ="https://www.w3schools.com/" >W3school </a></p>
         <p><a href ="http://mybitbybit.site/java34" > Mybit </a></p>
         <p><a href ="https://github.com/Vezly5/BIT-puslapis-"> Github</a></p>
-   
+        <p> Lorem ZIpsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
+        <p> Lorem AIpsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
+        <p> Lorem SIpsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
+        <p> Lorem kIpsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
+        <p> Lorem labasIpsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
+        <p> Lorem labasIpsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
+        <p> Lorem labasIpsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
+
         </div>
 
         <div id="width1" style="width: 801px;"> 
@@ -102,6 +115,38 @@
            console.log( ekranas/2)
 
        
+           let paragraphs = document.getElementsByTagName('p');
+           let j = 0
+          
+            for (j; j <paragraphs.length; ++j) {
+
+                ptoArray = paragraphs[j].innerHTML.split(" ");
+
+                spansecondwordarray (ptoArray)
+
+                ptoArray = ptoArray.join(" ")
+
+                paragraphs[j].innerHTML = ptoArray
+            }
+            
+         
+            function spansecondwordarray (elem) {
+
+                elem[2] = ' <span class="spansecondletter">'+elem[2].charAt(0)+'</span>'+elem[2].slice(1)
+                
+
+            }
+
+
+            console.log ( )
+         
+    // function spansecondwordsecondletter(elem) {
+            // elem.innerHTML = elem.textContent.replace(/\w+ (\w+)/, function(s, c) {
+            //   return s.replace(c, '<span class="spansecondletter">'+c.charAt(1)+'</span>'+c.slice(2));
+            //     });
+            // }
+
+
         </script>       
         
         
