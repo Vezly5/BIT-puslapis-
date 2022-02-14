@@ -147,6 +147,192 @@
             // }
 
 
+            let skaiciai = [];
+
+           
+
+                let arrayrow =  0 
+                let arrayrow2 =  0 
+                let didesniuskaiciuneidesimt = 0
+                console.log("didesniu skaiciu nei " + didesniuskaiciuneidesimt);
+
+            for (arrayrow; arrayrow < 30 ; ++arrayrow) { 
+
+            skaiciai.push(getRandomizer(5, 25))
+
+            }
+
+                
+            function getRandomizer(bottom, top) {
+           
+                return Math.floor( Math.random() * ( 1 + top - bottom ) ) + bottom;
+          
+            }
+      
+            for (arrayrow2; arrayrow2 < 30 ; ++arrayrow2) { 
+
+            
+              if (  skaiciai [arrayrow2] > 10 ) {
+
+                didesniuskaiciuneidesimt = ++didesniuskaiciuneidesimt
+        
+              }
+            }
+
+
+            
+            
+            
+            let largest = 0
+            let indeksas = [];
+            let poriniuskaiciu= 0
+
+
+            for (let z = 0; z < skaiciai.length; z++) {
+                if (largest <= skaiciai[z] ) {
+                    largest = skaiciai[z];
+                    indeksas.push(z)
+                }
+                if ( skaiciai[z] % 2 == 0) {
+                    poriniuskaiciu += z
+                }
+
+
+            }
+          
+            console.log(skaiciai);
+            console.log("didesniu skaiciu nei " + didesniuskaiciuneidesimt);
+
+             console.log("didziausias skaicius" + largest + "indeksas yra " + indeksas );
+
+             console.log("poriniu skaiciu indeksu suma yra " + poriniuskaiciu);
+
+
+
+            let naujasmasyvas = [];
+
+            for (let g = 0; g < skaiciai.length; g++) {
+                
+                naujasmasyvas[g]= skaiciai[g]-g
+
+            }
+            console.log("Naujas masyvas atemus indeksa "+naujasmasyvas);
+
+                
+            let papildomi = 0
+            
+            
+            for (papildomi; papildomi < 10 ; ++papildomi) { 
+
+                naujasmasyvas.push(getRandomizer(5, 25))
+
+                }
+
+                console.log("Naujas masyvas atemus indeksa pridejus 10  "+naujasmasyvas);
+
+
+                let porinismasyvas = [];
+                let neporinismasyvas = [];
+                
+
+                for (let ii = 0; ii < naujasmasyvas.length; ii++) {
+                
+                if ( naujasmasyvas[ii]%2 == 0) { 
+                    porinismasyvas.push(naujasmasyvas[ii])
+                }
+                else {
+                    neporinismasyvas.push(naujasmasyvas[ii])
+                }
+
+            }
+
+            console.log("porinis  "+porinismasyvas + " ir neporinis "+ neporinismasyvas);
+
+
+
+            for (let aa = 0; aa < skaiciai.length; aa++) {
+                
+                if ( aa%2 == 0 && skaiciai[aa] > 15 ) { 
+                    skaiciai[aa] = 0
+                }
+
+            }
+                console.log("pirminis masyvo poriniai indeksai ir didesnis nei 15 paversti i 0  " + skaiciai);
+
+
+
+                let pirmasmaziausiasindeksas
+                for (let kk = 0; kk < naujasmasyvas.length; kk++) {
+                
+                if ( naujasmasyvas[kk]>10 ) { 
+                    pirmasmaziausiasindeksas= kk
+                    kk= 100
+
+
+                }
+
+            }
+                
+            console.log("pirmas indeksas kurio reiksme didesne nei desimt  " + pirmasmaziausiasindeksas);
+
+                // trecia masyvu uzduotis 
+
+               let characters = "ABCD"
+                let raidziumasyvas = [];
+                let raideA = 0 
+                let raideB = 0 
+                let raideC = 0 
+                let raideD = 0 
+
+
+               for (let ff = 0; ff < 200; ff++) {
+                raidziumasyvas[ff] = characters.charAt(getRandomizer(0, 3))
+                if (  raidziumasyvas[ff] == "A" ) {
+
+                    raideA = ++raideA 
+                }
+                else if (  raidziumasyvas[ff] == "B" ) {
+                    raideB = ++raideB
+                }
+                else if (  raidziumasyvas[ff] == "C" ) {
+                    raideC = ++raideC
+                }
+                else if (  raidziumasyvas[ff] == "D" ) {
+                    raideD = ++raideD
+                }
+
+
+
+            }
+
+
+
+            console.log("raidziu masyvas turi raidziu A " + raideA +"Raidziu B "+ raideB + " raidziu C " + raideC + " raidziu D "+ raideD);
+
+            raidziumasyvas.sort();
+
+            console.log(raidziumasyvas);
+
+            
+            let simtaspirmasmasyvas = [];
+            let simtasantrasmasyvas = [];
+            let randomskaicius = [];
+
+
+            for (let jjj = 0; jjj < 200; jjj++) { 
+               randomskaicius= getRandomizer(100, 999)
+                if (simtaspirmasmasyvas.includes(randomskaicius) != true ) {
+                    simtaspirmasmasyvas[jjj] = randomskaicius
+
+                }
+                if (simtaspirmasmasyvas.includes(randomskaicius) != true ) {
+                    simtaspirmasmasyvas[jjj] = randomskaicius
+
+                }
+            }
+
+
+
         </script>       
         
         
