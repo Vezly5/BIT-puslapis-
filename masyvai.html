@@ -174,7 +174,7 @@
             
               if (  skaiciai [arrayrow2] > 10 ) {
 
-                didesniuskaiciuneidesimt = ++didesniuskaiciuneidesimt
+                didesniuskaiciuneidesimt++
         
               }
             }
@@ -191,15 +191,30 @@
             for (let z = 0; z < skaiciai.length; z++) {
                 if (largest <= skaiciai[z] ) {
                     largest = skaiciai[z];
-                    indeksas.push(z)
+                   
+
                 }
+
                 if ( skaiciai[z] % 2 == 0) {
                     poriniuskaiciu += z
                 }
 
 
+            } 
+
+
+            for (let z =0; z<skaiciai.length ; z++ ) { 
+                if ( largest == skaiciai[z] ) {
+
+                    indeksas.push(z)
+                }
+
             }
           
+
+
+
+
             console.log(skaiciai);
             console.log("didesniu skaiciu nei " + didesniuskaiciuneidesimt);
 
@@ -261,19 +276,20 @@
 
 
 
-                let pirmasmaziausiasindeksas
+         // 2g uzduotis
                 for (let kk = 0; kk < naujasmasyvas.length; kk++) {
                 
                 if ( naujasmasyvas[kk]>10 ) { 
-                    pirmasmaziausiasindeksas= kk
-                    kk= 100
+                    console.log("pirmas indeksas kurio reiksme didesne nei desimt  " + kk);
+                   break
 
 
                 }
 
             }
                 
-            console.log("pirmas indeksas kurio reiksme didesne nei desimt  " + pirmasmaziausiasindeksas);
+          
+            console.log("2h uzduoties arrejus kuri naudoja maziau nei desimt " + naujasmasyvas);
 
                 // trecia masyvu uzduotis 
 
@@ -332,19 +348,7 @@
             // }
 
 
-            while(simtaspirmasmasyvas.length < 101 && simtasantrasmasyvas.length < 101 ){
-                randomskaicius= getRandomizer(100, 999)
-            if(simtaspirmasmasyvas.indexOf(randomskaicius) === -1 && simtaspirmasmasyvas.length != 100 )    {
-                simtaspirmasmasyvas.push(randomskaicius)
-                
-             }
-
-             randomskaicius= getRandomizer(100, 999)
-             if(simtasantrasmasyvas.indexOf(randomskaicius) === -1 && simtasantrasmasyvas.length != 100 )    {
-                simtasantrasmasyvas.push(randomskaicius)
-                
-             }     
-            }     
+    
             
            
             // while(simtasantrasmasyvas.length < 100 ){
@@ -355,23 +359,7 @@
             //  }
                    
             // }     
-            console.log (simtaspirmasmasyvas)
-            console.log (simtasantrasmasyvas)
-
-
-            let sujungtasmasyvas= [];
-
-            for ( let i= 0 ;i < 100; i++) { 
-
-                if ( simtasantrasmasyvas.indexOf(simtaspirmasmasyvas[i]) === -1) {
-                    sujungtasmasyvas.push(simtaspirmasmasyvas[i])
-                }
-
-            }
-
-            console.log (sujungtasmasyvas);
-
-
+     
 
         </script>       
         
