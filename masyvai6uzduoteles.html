@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> 5 uzduotele</title>
+	</head>
+
+	<body>
+        <script>        
+
+
+             let simtaspirmasmasyvas = [];
+            let simtasantrasmasyvas = [];
+            let randomskaicius 
+
+
+            while( simtaspirmasmasyvas.length < 101 ){
+                randomskaicius= getRandomizer(100, 999)
+            if(simtaspirmasmasyvas.indexOf(randomskaicius) === -1 && simtaspirmasmasyvas.length != 100 )    {
+                simtaspirmasmasyvas.push(randomskaicius)
+                
+             }
+
+             randomskaicius= getRandomizer(100, 999)
+             if(simtasantrasmasyvas.indexOf(randomskaicius) === -1 && simtasantrasmasyvas.length != 100 )    {
+                simtasantrasmasyvas.push(randomskaicius)
+                
+             }     
+            }
+
+
+
+
+            function getRandomizer(bottom, top) {
+           
+           return Math.floor( Math.random() * ( 1 + top - bottom ) ) + bottom;
+     
+       }
+ 
+       for (arrayrow2; arrayrow2 < 30 ; ++arrayrow2) { 
+
+       
+         if (  skaiciai [arrayrow2] > 10 ) {
+
+           didesniuskaiciuneidesimt = ++didesniuskaiciuneidesimt
+   
+         }
+       }
+
+
+       console.log (simtaspirmasmasyvas)
+            console.log (simtasantrasmasyvas)
+
+        </script>
+    </script>    
+	</body>
+
+
+</html

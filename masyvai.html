@@ -319,17 +319,57 @@
             let randomskaicius = [];
 
 
-            for (let jjj = 0; jjj < 200; jjj++) { 
-               randomskaicius= getRandomizer(100, 999)
-                if (simtaspirmasmasyvas.includes(randomskaicius) != true ) {
-                    simtaspirmasmasyvas[jjj] = randomskaicius
+            // for (let jjj = 0; jjj < 100; jjj++) { 
+            //    randomskaicius= getRandomizer(100, 999)
+            //     if (simtaspirmasmasyvas.includes(randomskaicius) != true ) {
+            //         simtaspirmasmasyvas[jjj] = randomskaicius
 
-                }
-                if (simtaspirmasmasyvas.includes(randomskaicius) != true ) {
-                    simtaspirmasmasyvas[jjj] = randomskaicius
+            //     }
+            //     if (simtasantrasmasyvas.includes(randomskaicius) != true ) {
+            //         simtasantrasmasyvas[jjj] = randomskaicius
 
+            //     }
+            // }
+
+
+            while(simtaspirmasmasyvas.length < 101 && simtasantrasmasyvas.length < 101 ){
+                randomskaicius= getRandomizer(100, 999)
+            if(simtaspirmasmasyvas.indexOf(randomskaicius) === -1 && simtaspirmasmasyvas.length != 100 )    {
+                simtaspirmasmasyvas.push(randomskaicius)
+                
+             }
+
+             randomskaicius= getRandomizer(100, 999)
+             if(simtasantrasmasyvas.indexOf(randomskaicius) === -1 && simtasantrasmasyvas.length != 100 )    {
+                simtasantrasmasyvas.push(randomskaicius)
+                
+             }     
+            }     
+            
+           
+            // while(simtasantrasmasyvas.length < 100 ){
+            //     randomskaicius= getRandomizer(100, 999)
+            // if(simtasantrasmasyvas.indexOf(randomskaicius) === -1 && simtaspirmasmasyvas.indexOf(randomskaicius) === -1) {
+            //     simtasantrasmasyvas.push(randomskaicius)
+                
+            //  }
+                   
+            // }     
+            console.log (simtaspirmasmasyvas)
+            console.log (simtasantrasmasyvas)
+
+
+            let sujungtasmasyvas= [];
+
+            for ( let i= 0 ;i < 100; i++) { 
+
+                if ( simtasantrasmasyvas.indexOf(simtaspirmasmasyvas[i]) === -1) {
+                    sujungtasmasyvas.push(simtaspirmasmasyvas[i])
                 }
+
             }
+
+            console.log (sujungtasmasyvas);
 
 
 
