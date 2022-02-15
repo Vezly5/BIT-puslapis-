@@ -13,8 +13,10 @@
             let randomskaicius 
 
 
-            while( simtaspirmasmasyvas.length < 101 ){
+            while( (simtaspirmasmasyvas.length+simtasantrasmasyvas.length) < 200){
+
                 randomskaicius= getRandomizer(100, 999)
+
             if(simtaspirmasmasyvas.indexOf(randomskaicius) === -1 && simtaspirmasmasyvas.length != 100 )    {
                 simtaspirmasmasyvas.push(randomskaicius)
                 
@@ -24,7 +26,13 @@
              if(simtasantrasmasyvas.indexOf(randomskaicius) === -1 && simtasantrasmasyvas.length != 100 )    {
                 simtasantrasmasyvas.push(randomskaicius)
                 
-             }     
+
+                console.log(simtaspirmasmasyvas.length + " kitas lengt"+ simtasantrasmasyvas.length) 
+             }
+             
+             
+   
+
             }
 
 
@@ -36,19 +44,58 @@
      
        }
  
-       for (arrayrow2; arrayrow2 < 30 ; ++arrayrow2) { 
 
-       
-         if (  skaiciai [arrayrow2] > 10 ) {
-
-           didesniuskaiciuneidesimt = ++didesniuskaiciuneidesimt
-   
-         }
-       }
-
-
-       console.log (simtaspirmasmasyvas)
+            console.log (simtaspirmasmasyvas)
             console.log (simtasantrasmasyvas)
+
+
+            let sujungtasmasyvas= [];
+
+            for ( let i= 0 ;i < 100; i++) { 
+
+                if ( simtasantrasmasyvas.indexOf(simtaspirmasmasyvas[i]) === -1) {
+                    sujungtasmasyvas.push(simtaspirmasmasyvas[i])
+                }
+
+            }
+
+            console.log (sujungtasmasyvas);
+
+
+            
+            let sujungtasmasyvaskartojasi= [];
+
+            for ( let i= 0 ;i < 100; i++) { 
+
+                if ( simtasantrasmasyvas.indexOf(simtaspirmasmasyvas[i]) != -1) {
+                  sujungtasmasyvaskartojasi.push(simtaspirmasmasyvas[i])
+                }
+
+            }
+
+
+            let septintas= [];
+
+            for ( let i= 0 ;i < 10; i++) { 
+
+              if ( i == 0 || i == 1) { 
+
+                septintas[i]=getRandomizer(5, 25)
+
+              }
+              else {
+                septintas[i]=septintas[i-1]+septintas[i-2]
+
+              }
+
+
+
+            }
+
+            console.log (septintas);
+
+
+
 
         </script>
     </script>    
