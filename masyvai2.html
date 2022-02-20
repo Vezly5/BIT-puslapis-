@@ -1,0 +1,241 @@
+<title> masyvai</title>
+<meta charset="UTF-8">
+<style>
+    
+    body { margin: 0;
+        background-color: rgb(222, 235, 238);
+    }
+        </style>
+	</head>
+
+	<body>
+
+       
+    <script>
+
+        function randomskaicius (bottom, top) {
+           
+           return Math.floor( Math.random() * ( 1 + top - bottom ) ) + bottom;
+     
+       }
+
+      // Masyvai 2,1 
+            let masyvumasvyas = [];
+         
+     
+             
+         for ( let i = 0 ; i< 5 ; ++i)   {
+            let skaiciai = [];
+            for (let i = 0 ; i < 5 ; ++i) { 
+              
+            skaiciai.push(randomskaicius(5, 25))
+         
+            }
+            masyvumasvyas.push(skaiciai)
+
+        }
+
+
+        console.log("skaiciai " + masyvumasvyas);
+        console.log("masyvo ilgis " + masyvumasvyas.length);
+
+
+
+     // Masyvai 2,2.a
+            let didesnineidesimt = 0
+
+              for (i = 0 ; i < masyvumasvyas.length; ++i) { 
+                
+                for ( z = 0; z < masyvumasvyas[i].length; ++z) {
+                    if (masyvumasvyas[i][z]> 10) {
+                        didesnineidesimt = ++didesnineidesimt
+
+                    }
+                }
+
+                
+
+            }
+        
+            console.log("Didesniu skaiciu nei 10 masyve yra " + didesnineidesimt); 
+
+
+     // Masyvai 2,2.b
+            let largest = 0
+               
+            
+
+                for (i = 0 ; i < masyvumasvyas.length; ++i) { 
+                
+                for ( z = 0; z < masyvumasvyas[i].length; ++z) {
+                    if (largest < masyvumasvyas[i][z]) {
+                        largest = masyvumasvyas[i][z]
+
+                    }
+                }
+
+  
+
+}
+            console.log( "Didziausias skaicius yra "+ largest); 
+
+           
+               
+               // Masyvai 2,2.c
+
+                for (i = 0 ; i < masyvumasvyas.length; ++i) { 
+                    let sum = 0
+                for ( z = 0; z < masyvumasvyas[i].length; ++z) {
+                   sum +=  masyvumasvyas[i][z]
+                        
+
+                    }
+                    console.log("masyvo suma " + z+" "+ sum)
+                }
+
+  
+   // Masyvai 2,2.d
+
+                for (i = 0 ; i < masyvumasvyas.length; ++i) { 
+                    
+                    masyvumasvyas[i].push( randomskaicius(5, 25))
+                    masyvumasvyas[i].push( randomskaicius(5, 25))
+                }
+
+                console.table(masyvumasvyas)
+
+   // Masyvai 2,2.e
+                let naujasSumMasvyas = [];
+                for (i = 0 ; i < masyvumasvyas.length; ++i) { 
+                    let sum = 0
+                for ( z = 0; z < masyvumasvyas[i].length; ++z) {
+                   sum +=  masyvumasvyas[i][z]
+                        
+
+                    }
+                    naujasSumMasvyas.push(sum)
+                }
+
+                console.table(naujasSumMasvyas)
+
+
+
+
+    // Masvyas 2.3 
+
+    let treciasMasvyas = [];
+    let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"     
+     
+             
+         for ( let i = 0 ; i< 10 ; ++i)   {
+            let skaiciai = [];
+            for (let i = 0 ; i < randomskaicius(2, 20) ; ++i) { 
+              
+            skaiciai.push(characters.charAt(randomskaicius(1, 25)))
+            skaiciai.sort();
+            }
+            treciasMasvyas.push(skaiciai)
+
+        }
+        console.table(treciasMasvyas)
+
+    // Masvyas 2.4
+        // console.table(treciasMasvyas.sort())
+
+        let shortest = 0
+
+ function compare(a,b) {
+     
+    if (a.length < b.length)
+        return -1;
+    if (a.length > b.length)
+        return 1;
+    return 0;
+}
+
+
+function letterK (a,b) {
+     
+     if (a.indexOf("K") != -1  && b.indexOf("K") == -1 )
+         return -1;
+     if (a.indexOf("K") == -1  && b.indexOf("K") != -1 )
+         return 1;
+     return 0;
+ }
+ 
+
+ console.table(treciasMasvyas.sort(compare));
+
+ console.table(treciasMasvyas.sort(letterK));
+
+
+     // Masvyas 2.5
+  
+
+     let desimtelementumasyvas = []; 
+
+     for (i = 0 ; i < 10; ++i) { 
+        let elementoreiksme = randomskaicius(0, 5)
+
+        if (elementoreiksme != 0) {
+
+              let skaiciai = [];
+            for (let i = 0 ; i < elementoreiksme ; ++i) { 
+              
+            skaiciai.push(randomskaicius(5, 25))
+         
+            }
+            desimtelementumasyvas.push(skaiciai)
+
+               }
+        else {
+            desimtelementumasyvas[i] = randomskaicius(0, 10)
+
+        }
+    }
+
+
+
+                console.table(desimtelementumasyvas);
+
+             // Masvyas 2.6
+
+             let totalsum = 0
+             for (i = 0 ; i < desimtelementumasyvas.length; ++i) { 
+                    let sum = 0
+                 if (typeof desimtelementumasyvas[i] != "number") 
+                   { 
+                       console.log ("Elementas " + i + "yra array")
+                for ( z = 0; z < desimtelementumasyvas[i].length; ++z) {
+                   sum +=  desimtelementumasyvas[i][z]
+                   console.log ("suma yra  " + sum + "dabar prides "+desimtelementumasyvas[i][z] ) 
+
+                    } }
+                else {
+
+                    sum  +=  desimtelementumasyvas[i]
+
+                }
+                
+                totalsum += sum
+                console.log ("Total sum dabar yra" + totalsum)
+
+               
+                 }
+                    
+                    
+                    // console.log ("masyvo sumos elementu " + sum)
+         
+
+
+
+
+    </script>       
+        
+        
+
+
+	</body>
+
+
+</html>
