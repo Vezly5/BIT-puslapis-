@@ -9,7 +9,7 @@
 	</head>
 
 	<body>
-
+        <p id="septintas">I am a paragraph.</p>
        
     <script>
 
@@ -227,9 +227,86 @@ function letterK (a,b) {
                     // console.log ("masyvo sumos elementu " + sum)
          
 
+                 // 2,7 uzduotis
+                 let septintasMasyvas = [];
+                 let randomcharacters =  "#%+*@裡"
+                 
+             
+         for ( let i = 0 ; i< 10 ; ++i)   {
+            let skaiciai = [];
+            for (let i = 0 ; i < 10 ; ++i) { 
+                let duelementai = [];
+                for (let z = 0 ; z <1 ; ++ z) {
+                    duelementai.push(randomcharacters.charAt(randomskaicius(1, 5)));
+                    let randomcolor = Math.floor(Math.random()*16777215).toString(16);
+                     duelementai.push("#"+randomcolor);
+                }
+                skaiciai.push(duelementai)
+            }
+            septintasMasyvas.push(skaiciai)
+
+        }
+
+            console.table(septintasMasyvas);
+        console.log("skaiciai " + septintasMasyvas);
+        console.log("masyvo ilgis " + septintasMasyvas.length);
+        
+        function makeTableHTML(masyvas) {
+         let result = "<table border=1>";
+    for(let i=0; i<masyvas.length; i++) {
+        result += "<tr>";
+        for(let j=0; j<masyvas[i].length; j++){
+            let antrolygio = masyvas[i][j]
+            result += "<td bgcolor = "+antrolygio[1]+ " style='width:30px ; height:30px'>"+antrolygio[0]+"</td>";
+        }
+        result += "</tr>";
+    }
+    result += "</table>";
+
+    return result;
+}
+
+document.getElementById("septintas").innerHTML = makeTableHTML(septintasMasyvas);
 
 
 
+                 // 2,78uzduotis
+
+                 let simtasVienasMasyvas = [];
+               
+
+                for (i = 0 ; simtasVienasMasyvas.length < 101 ; ++i) { 
+
+                    let skaicius = randomskaicius(0, 300)
+                    if (simtasVienasMasyvas.indexOf(skaicius) == -1 ){
+                    simtasVienasMasyvas.push(skaicius)}
+
+                }
+               let descending = simtasVienasMasyvas.sort(function(a, b){return a - b})
+                console.table(simtasVienasMasyvas)
+                
+                let didziausiasvalue = descending.slice(100)
+                console.log("didziausias skaicius " + didziausiasvalue)
+                console.log("indeksas   " + simtasVienasMasyvas.indexOf(didziausiasvalue[0]))
+
+
+                simtasVienasMasyvas.slice(simtasVienasMasyvas.indexOf(didziausiasvalue[0]))
+                console.table(simtasVienasMasyvas)
+
+               
+                let pirmapuse = simtasVienasMasyvas.slice(0,50)
+                let pirmospusessum = pirmapuse.reduce(function(a, b) { return a + b; }, 0);
+               
+                let antrapuse = simtasVienasMasyvas.slice(50,100).reverse();
+
+                let antrospusessum = antrapuse.reduce(function(a, b) { return a + b; }, 0);
+
+                let pirmasSudejimas = pirmapuse.concat(didziausiasvalue)
+                let antrasSudejimas = pirmasSudejimas.concat(antrapuse)
+                console.table(antrasSudejimas)
+
+            console.log("Suma pirmos pusese "+ pirmospusessum)
+            console.log("Suma pirmos pusese " + antrospusessum)
     </script>       
         
         
